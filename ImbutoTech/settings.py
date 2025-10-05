@@ -20,7 +20,7 @@ DEBUG = True  # Set to False in production
 # DATABASE
 
 import os
-"""
+
 DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL')
@@ -38,7 +38,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+"""
 
 
 PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://imbutotech.onrender.com")
