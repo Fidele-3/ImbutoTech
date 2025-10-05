@@ -41,7 +41,7 @@ DATABASES = {
 
 
 
-PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://ImbutoTech.onrender.com")
+PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://imbutotech.onrender.com")
 
 # APPLICATIONS
 INSTALLED_APPS = [
@@ -158,14 +158,14 @@ EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS') == 'True'
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ImbutoTech.onrender.com",
-    "https://ImbutoTech.vercel.app",
+    "https://imbutotech.onrender.com",
+    "https://imbutotech.vercel.app",
     "http://localhost:3000",
     "http://localhost:3000",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://ImbutoTech.onrender.com",
-    "https://ImbutoTech.vercel.app",
+    "https://imbutotech.onrender.com",
+    "https://imbutotech.vercel.app",
     "http://localhost:3000",
     "http://localhost:3000",
 ]
@@ -177,7 +177,7 @@ CSRF_TRUSTED_ORIGINS = [
 #).split(",")
 
 FRONTEND_URLS = [
-    "https://ImbutoTech.vercel.app",
+    "https://imbutotech.vercel.app",
     "http://localhost:3000",
 ]
 

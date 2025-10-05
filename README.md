@@ -98,7 +98,7 @@ The platform operates on a hierarchical model based on Rwanda's administrative s
     - Submits requests and reports visible to their local Cell Officer,District officer and also the whole project Super admin.
 
 ## Deployed links
-  - https://ImbutoTech.vercel.app/ 
+  - https://imbutotech.vercel.app/ 
   (Access the fully app features their on the link. USSD is still in process but its features are alread in place and architecture is well designed for it.) 
 
 ## SUPER ADMIN LOGIN CREDENTIALS
