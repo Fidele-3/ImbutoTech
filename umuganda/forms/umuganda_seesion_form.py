@@ -1,7 +1,7 @@
 from django import forms
-from ibabi.models import ibabiSession
+from ImbutoTech.models import ImbutoTechSession
 
-class ibabiSessionForm(forms.ModelForm):
+class ImbutoTechSessionForm(forms.ModelForm):
     class Meta:
-        model = ibabiSession
+        model = ImbutoTechSession
         fields = ['date', 'sector']

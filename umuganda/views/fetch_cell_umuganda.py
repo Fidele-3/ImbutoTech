@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from ibabi.models import ibabiSession
+from ImbutoTech.models import ImbutoTechSession
 
 def cell_officer_dashboard(request):
     profile = request.user.profile  
@@ -10,14 +10,14 @@ def cell_officer_dashboard(request):
     today = timezone.now().date()
 
     
-    session = ibabiSession.objects.filter(
+    session = ImbutoTechSession.objects.filter(
         sector=sector,
         cell=cell,
         date__gte=today
     ).order_by('date').first()  
 
     context = {
-        'ibabi_session': session,  
+        'ImbutoTech_session': session,  
     }
 
     return render(request, 'admin/admin_level3_dashboard.html', context)

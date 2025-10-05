@@ -1,10 +1,48 @@
 from rest_framework import serializers
 from users.models.customuser import CustomUser
 from users.models.userprofile import UserProfile
-from users.models.addresses import District, Sector, Cell
+from users.models.addresses import Province, District, Sector, Cell, Village
 
 
+# --- Location serializers ---
+class ProvinceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Province
+        fields = ["id", "name"]
+
+
+class DistrictSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = District
+        fields = ["id", "name"]
+
+
+class SectorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sector
+        fields = ["id", "name"]
+
+
+class CellSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cell
+        fields = ["id", "name"]
+
+
+class VillageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Village
+        fields = ["id", "name"]
+
+
+# --- Profile serializer with nested names ---
 class UserProfileSerializer(serializers.ModelSerializer):
+    province = ProvinceSerializer(read_only=True)
+    district = DistrictSerializer(read_only=True)
+    sector = SectorSerializer(read_only=True)
+    cell = CellSerializer(read_only=True)
+    village = VillageSerializer(read_only=True)
+
     class Meta:
         model = UserProfile
         fields = [
@@ -23,6 +61,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         ]
 
 
+# --- User serializer ---
 class UserSerializer(serializers.ModelSerializer):
     profile = UserProfileSerializer(required=False)
     work_assignment = serializers.SerializerMethodField()
@@ -78,6 +117,7 @@ class UserSerializer(serializers.ModelSerializer):
             }
 
         return assignment or None
+
 
     def validate(self, attrs):
         errors = {}

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ibabi.models import Fine
+from ImbutoTech.models import Fine
 from users.models.userprofile import UserProfile  
 class UserProfileMiniSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,4 +1,4 @@
-# users/models/land.py
+
 import uuid
 from django.db import models
 from users.models.addresses import Province, District, Sector, Cell, Village
@@ -27,7 +27,7 @@ class Land(models.Model):
     def __str__(self):
         return f"{self.upi} - {self.size_hectares} ha"
 
-# reports/models.py
+
 class HarvestReport(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     farmer = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="harvest_reports")

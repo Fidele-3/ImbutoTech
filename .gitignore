@@ -1,6 +1,6 @@
 # Ignore environment variables
 .env
-ibabi/.env
+ImbutoTech/.env
 
 # Python bytecode
 __pycache__/

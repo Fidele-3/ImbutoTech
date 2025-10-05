@@ -38,7 +38,7 @@ class DistrictInventory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name="inventories")
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    
+    size = models.CharField(max_length=50, blank=True, null=True, help_text="Size or type of the product if applicable")
     quantity_added = models.PositiveBigIntegerField(default=0, help_text="Total quantity added to this district inventory")
     quantity_at_cell = models.DecimalField(max_digits=12, decimal_places=2, default=0)  
     # total allocated to cells
@@ -67,6 +67,7 @@ class CellInventory(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity_available = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     updated_at = models.DateTimeField(auto_now=True)
+    size = models.CharField(max_length=50, blank=True, null=True, help_text="Size or type of the product if applicable")
 
     def __str__(self):
         return f"{self.product.name} - {self.cell.name} (Sector: {self.sector.name}, District: {self.district.name})"

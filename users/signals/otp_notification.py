@@ -19,7 +19,7 @@ def trigger_password_reset_email(sender, instance, created, **kwargs):
     otp_code = instance.otp_code
 
     uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
-    reset_link = f"{settings.FRONTEND_URL}/reset-password/{uidb64}/{otp_code}/"
+    reset_link = f"{settings.FRONTEND_URLS}/reset-password/{uidb64}/{otp_code}/"
 
 
     send_email_password_reset_otp.delay(

@@ -20,7 +20,7 @@ DEBUG = True  # Set to False in production
 # DATABASE
 
 import os
-
+"""
 DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL')
@@ -39,9 +39,9 @@ DATABASES = {
     }
 }
 
-"""
 
-PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://ibabi.onrender.com")
+
+PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://ImbutoTech.onrender.com")
 
 # APPLICATIONS
 INSTALLED_APPS = [
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     "django.contrib.flatpages",
     "django.contrib.sitemaps",
     "django.contrib.humanize",
-    "ibabi",
+    "ImbutoTech",
     "users",
     "admn",
     "report",
@@ -79,8 +79,8 @@ MIDDLEWARE = [
 
 ]
 
-ROOT_URLCONF = "ibabi.urls"
-WSGI_APPLICATION = "ibabi.wsgi.application"
+ROOT_URLCONF = "ImbutoTech.urls"
+WSGI_APPLICATION = "ImbutoTech.wsgi.application"
 
 
 AUTH_USER_MODEL = "users.CustomUser"
@@ -158,14 +158,14 @@ EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS') == 'True'
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ibabi.onrender.com",
-    "https://ibabi.vercel.app",
+    "https://ImbutoTech.onrender.com",
+    "https://ImbutoTech.vercel.app",
     "http://localhost:3000",
     "http://localhost:3000",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://ibabi.onrender.com",
-    "https://ibabi.vercel.app",
+    "https://ImbutoTech.onrender.com",
+    "https://ImbutoTech.vercel.app",
     "http://localhost:3000",
     "http://localhost:3000",
 ]
@@ -177,7 +177,7 @@ CSRF_TRUSTED_ORIGINS = [
 #).split(",")
 
 FRONTEND_URLS = [
-    "https://ibabi.vercel.app",
+    "https://ImbutoTech.vercel.app",
     "http://localhost:3000",
 ]
 

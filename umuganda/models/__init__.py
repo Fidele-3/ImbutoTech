@@ -1,4 +1,4 @@
 from .attendance import Attendance
 from .fine import Fine
-from .ibabisession import ibabiSession, CellibabiSession
+from .ImbutoTechsession import ImbutoTechSession, CellImbutoTechSession
 from .feedback import Feedback

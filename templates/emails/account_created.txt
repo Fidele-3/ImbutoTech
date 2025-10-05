@@ -1,6 +1,6 @@
 Welcome, {{ full_names }}! 🎉
 
-Your account on ibabi has been successfully created.
+Your account on ImbutoTech has been successfully created.
 
 You can now log in using your registered email:
 {{ email }}
@@ -9,6 +9,6 @@ If you have any questions or need help, contact us at:
 {{ support_email }}
 
 Thank you,  
-The ibabi Team
+The ImbutoTech Team
 
-© {{ now|date:"Y" }} ibabi. All rights reserved.
+© {{ now|date:"Y" }} ImbutoTech. All rights reserved.

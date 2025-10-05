@@ -3,18 +3,18 @@ from django.db import models
 from users.models.addresses import Sector, Cell, Village
 from users.models.customuser import CustomUser
 
-class ibabiSession(models.Model):
+class ImbutoTechSession(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     date = models.DateField()
-    sector = models.ForeignKey(Sector, on_delete=models.CASCADE, related_name='ibabi_sessions')
+    sector = models.ForeignKey(Sector, on_delete=models.CASCADE, related_name='ImbutoTech_sessions')
     created_by = models.ForeignKey(
         CustomUser,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
         related_name='sector_created_sessions',
-        help_text="Sector admin who initiated the ibabi date"
+        help_text="Sector admin who initiated the ImbutoTech date"
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -27,10 +27,10 @@ class ibabiSession(models.Model):
         return f"{self.sector.name} - {self.date}"
 
 
-class CellibabiSession(models.Model):
+class CellImbutoTechSession(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    sector_session = models.ForeignKey(ibabiSession, on_delete=models.CASCADE, related_name='cell_sessions')
-    cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='cell_ibabi_sessions')
+    sector_session = models.ForeignKey(ImbutoTechSession, on_delete=models.CASCADE, related_name='cell_sessions')
+    cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='cell_ImbutoTech_sessions')
     village = models.ForeignKey(Village, on_delete=models.SET_NULL, null=True, blank=True)
 
     tools_needed = models.TextField(blank=True, null=True)

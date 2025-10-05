@@ -3,10 +3,10 @@ from django.dispatch import receiver
 from django.utils.timezone import now
 from users.models.customuser import CustomUser
 from users.models.userprofile import UserProfile
-from ibabi.models import CellibabiSession, Attendance, Fine
+from ImbutoTech.models import CellImbutoTechSession, Attendance, Fine
 
-@receiver(post_save, sender=CellibabiSession)
-def assign_fines_to_absentees(sender, instance: CellibabiSession, created, **kwargs):
+@receiver(post_save, sender=CellImbutoTechSession)
+def assign_fines_to_absentees(sender, instance: CellImbutoTechSession, created, **kwargs):
   
     if instance.sector_session.date >= now().date():
         return
@@ -46,6 +46,6 @@ def assign_fines_to_absentees(sender, instance: CellibabiSession, created, **kwa
                 session=instance,
                 defaults={
                     'amount': instance.fines_policy,
-                    'reason': 'Absent from ibabi session',
+                    'reason': 'Absent from ImbutoTech session',
                 }
             )

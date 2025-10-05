@@ -14,11 +14,7 @@ OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 
 @shared_task(bind=True, max_retries=3)
 def fetch_24h_forecast(self):
-    """
-    Fetches next 24 hours forecast for all cells.
-    Scheduled: every 1 hour via Celery Beat.
-    Stores in `next_24h_forecast` JSON field in CellClimateData.
-    """
+    
     cells = Cell.objects.all()
     logger.info(f"Starting 24h forecast fetch for {cells.count()} cells...")
 

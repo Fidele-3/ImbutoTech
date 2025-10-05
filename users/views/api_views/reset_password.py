@@ -6,7 +6,7 @@ from rest_framework import status
 from users.models import CustomUser, PasswordResetOTP
 from django.utils import timezone
 from datetime import timedelta
-from ibabi.utils.generate_otp import generate_otp
+from ImbutoTech.utils.generate_otp import generate_otp
 from users.tasks.otp_notification import send_email_password_reset_otp
 from users.tasks.send_email_password_reset_success import send_email_password_reset_success
 from django.urls import reverse

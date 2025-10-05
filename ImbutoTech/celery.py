@@ -7,9 +7,9 @@ from celery.schedules import crontab
 from celery.signals import before_task_publish, task_prerun
 from django.conf import settings
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ibabi.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ImbutoTech.settings")
 
-app = Celery("ibabi")
+app = Celery("ImbutoTech")
 
 print("⏳ Initializing Celery app...", flush=True)
 
@@ -44,7 +44,7 @@ try:
 except Exception as e:
     print(f"❌ Failed to autodiscover tasks: {e}", file=sys.stderr, flush=True)
 
-# Celery Beat Schedule (only ibabi-specific tasks)
+# Celery Beat Schedule (only ImbutoTech-specific tasks)
 try:
     app.conf.beat_schedule = {
         'fetch_24h_forecast_hourly': {

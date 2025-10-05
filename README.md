@@ -1,11 +1,11 @@
-# IBABI Platform - Digital Agricultural Management System
+# ImbutoTech Platform - Digital Agricultural Management System
 
 **CLICK TO SEE THE PROJECT LICENSE**: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 
 ## Overview
 
-IBABI Platform is a comprehensive digital agricultural management system designed to revolutionize farming support in Rwanda. The platform connects government agricultural officers, farmers (citizens), and agricultural experts through a unified web application, PWA mobile app, and future USSD integration.
+ImbutoTech Platform is a comprehensive digital agricultural management system designed to revolutionize farming support in Rwanda. The platform connects government agricultural officers, farmers (citizens), and agricultural experts through a unified web application, PWA mobile app, and future USSD integration.
 
 This system enables farmers to request resources, report issues, submit concerns, and make production reports while allowing officials at various administrative levels to manage inventories, approve requests, and provide timely feedback, creating a seamless agricultural support ecosystem.
 
@@ -98,7 +98,7 @@ The platform operates on a hierarchical model based on Rwanda's administrative s
     - Submits requests and reports visible to their local Cell Officer,District officer and also the whole project Super admin.
 
 ## Deployed links
-  - https://ibabi.vercel.app/ 
+  - https://ImbutoTech.vercel.app/ 
   (Access the fully app features their on the link. USSD is still in process but its features are alread in place and architecture is well designed for it.) 
 
 ## SUPER ADMIN LOGIN CREDENTIALS
