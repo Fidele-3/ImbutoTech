@@ -102,8 +102,8 @@ The platform operates on a hierarchical model based on Rwanda's administrative s
   (Access the fully app features their on the link. USSD is still in process but its features are alread in place and architecture is well designed for it.) 
 
 ## SUPER ADMIN LOGIN CREDENTIALS
-  - **EMAIL**: fidelensanze100@example.com
-  - **PASSWORD** : Citizen123!
+  - **EMAIL**: fidelensanzumuhire9@gmail.com
+  - **PASSWORD** : 11223344
   - **OTP**: reach out to us at +250786161794, or **email**: fidelensanzumuhire9@gmail.com so that we can give you the OTP after successfully logging in with email and password
 
  **You can create as many citizen users as you want, and logging in as well**. remember to ask the otp on the provided phone, whatsapp or even on email after successfully loging.
