@@ -111,14 +111,6 @@ The platform operates on a hierarchical model based on Rwanda's administrative s
 ## Creating admin users( district officer, cell officer, teachnicians must be followed as the rules we stated describes. See the info above for more clarities and how those users can be created as well.)
 
 
-## TEAM MEMBERS:
- - Fidele Nsanzumuhire  ----> Full stack engineer(Group leader)
- - Nsengiyumva Augustin -----> AI engineeer
- - Niyoyita Stephane --------> Data analyst
- - Bizimana Ibrahim  ---------> AI engineer
- - Giraneza Fiston  -----------> UX/UI Engineer
-
-
 ## PROJECT ARCHITECTURE
 ![Project Architecture](image/diagram.jpg)
 
