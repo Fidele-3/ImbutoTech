@@ -35,7 +35,7 @@ class DistrictInventoryViewSet(viewsets.ModelViewSet):
             elif user.user_level == 'cell_officer' and hasattr(user, 'managed_cell'):
                 if user.managed_cell:
                     qs = qs.filter(district=user.managed_cell.sector.district)
-            elif user.user_level == 'farmer':
+            elif user.user_level == 'citizen':
                 # Farmers typically shouldn't access district inventory
                 qs = qs.none()
         return qs
@@ -59,7 +59,7 @@ class CellInventoryViewSet(viewsets.ModelViewSet):
             elif user.user_level == 'district_officer' and hasattr(user, 'managed_district'):
                 if user.managed_district:
                     qs = qs.filter(district=user.managed_district)
-            elif user.user_level == 'farmer':
+            elif user.user_level == 'citizen':
                 # Farmers typically shouldn't access cell inventory
                 qs = qs.none()
         return qs
@@ -77,7 +77,7 @@ class ResourceRequestViewSet(viewsets.ModelViewSet):
         qs = super().get_queryset()
 
         if hasattr(user, 'user_level'):
-            if user.user_level == 'farmer':
+            if user.user_level == 'citizen':
                 qs = qs.filter(farmer=user)
             elif user.user_level == 'cell_officer' and hasattr(user, 'managed_cell'):
                 if user.managed_cell:
@@ -101,7 +101,7 @@ class ResourceRequestFeedbackViewSet(viewsets.ModelViewSet):
         qs = super().get_queryset()
 
         if hasattr(user, 'user_level'):
-            if user.user_level == 'farmer':
+            if user.user_level == 'citizen':
                 qs = qs.filter(farmer=user)
             # Officers and admins see all
         return qs

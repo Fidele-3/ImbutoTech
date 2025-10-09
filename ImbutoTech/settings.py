@@ -38,8 +38,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
 
+"""
 
 PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "https://imbutotech.onrender.com")
 
