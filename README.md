@@ -111,9 +111,43 @@ The platform operates on a hierarchical model based on Rwanda's administrative s
 ## Creating admin users( district officer, cell officer, teachnicians must be followed as the rules we stated describes. See the info above for more clarities and how those users can be created as well.)
 
 
-## PROJECT ARCHITECTURE
+
+
+## 🎬 Demo Video
+[![Watch the Demo Video](https://img.shields.io/badge/▶️%20Watch%20Demo-Click%20Here-blue?style=for-the-badge)](https://drive.google.com/file/d/1h93bM0ldZvrz6Iohc9WYVFTyt3Jd8S8f/view?usp=sharing)
+
+---
+
+## 🗂️ Presentation Info
+💡 *To view more details and project presentation, click the link below:*  
+[![View Presentation](https://img.shields.io/badge/📖%20View%20Presentation-Click%20Here-success?style=for-the-badge)](https://drive.google.com/file/d/1t-CvjAi4nQbJ2ZTvLJ1hrINwBh86gpax/view?usp=drive_link)
+
+---
+
+## 🧱 Project Architecture
 ![Project Architecture](image/diagram.jpg)
 
+---
 
-## License
+## 👥 Team
+
+| Name | Role |
+|------|------|
+| **Nsanzumuhire Fidele** | Developer |
+| **Niyoyita Stephane** | Developer |
+
+---
+
+## 🧾 Proof of Work
+
+### **Nsanzumuhire Fidele**
+![Fidele Proof](image/fidele.jpeg)
+
+### **Niyoyita Stephane**
+![Niyoyita Proof](image/niyoyita.png)
+
+---
+
+## ⚖️ License
 This project is licensed under the [MIT License](LICENSE).
+
